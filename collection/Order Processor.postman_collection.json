@@ -61,7 +61,7 @@
 						{
 							"key": "file",
 							"type": "file",
-							"src": "/D:/Proyectos/Personales/Michael/order-processor/src/main/samples/pedidos.csv"
+							"src": "/pedidos.csv"
 						}
 					]
 				},
