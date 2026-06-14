@@ -5,7 +5,7 @@ WORKDIR /orders-processor
 COPY pom.xml .
 COPY src ./src
 
-RUN mvn clean package -DskipTests
+RUN mvn clean package
 
 FROM eclipse-temurin:21-jdk
 
