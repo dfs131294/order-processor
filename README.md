@@ -127,4 +127,5 @@ curl --location --request POST 'localhost:8080/orders-processor/pedidos/cargar' 
 --form 'file=@"/{ruta de archivo}"'
 
 Nota: \
-En la ruta "src/main/samples" se encuentra una archivo de ejemplo "pedidos.csv"
+- En la ruta "/samples" se encuentra un archivo de ejemplo "pedidos.csv".
+- En la ruta "/collection" se encuentra un archivo de coleccion de Postman.

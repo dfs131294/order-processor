@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "a7638a74-1370-4181-ad8a-86d3f6ed8795",
+		"name": "Order Processor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/orders-processor/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test\",\r\n    \"password\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/orders-processor/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders-processor",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/orders-processor/pedidos/cargar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0IiwiaWF0IjoxNzgxNDcxNzI4LCJleHAiOjE3ODE1NTgxMjh9.9FUW_kMWLmkSXC55-Qth4SSGO1TvC84bL_9xjJCFz5Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Idempotency-Key",
+						"value": "1231231",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/D:/Proyectos/Personales/Michael/order-processor/src/main/samples/pedidos.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/orders-processor/pedidos/cargar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders-processor",
+						"pedidos",
+						"cargar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
