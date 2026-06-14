@@ -49,7 +49,7 @@ public class OrderProcessController {
                                     implementation = ErrorResponseDTO.class),
                             examples = {
                                     @ExampleObject(
-                                            name = "Invalid File",
+                                            name = "Archivo anteriormente procesado",
                                             value = """
                                                     {
                                                         "code": "CODE_02",
@@ -71,7 +71,7 @@ public class OrderProcessController {
                                     implementation = ErrorResponseDTO.class),
                             examples = {
                                     @ExampleObject(
-                                            name = "Invalid File",
+                                            name = "Header invalido",
                                             value = """
                                                     {
                                                         "code": "CODE_01",
