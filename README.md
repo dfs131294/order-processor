@@ -126,6 +126,6 @@ curl --location --request POST 'localhost:8080/orders-processor/pedidos/cargar' 
 --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0IiwiaWF0IjoxNzgxNDYzOTExLCJleHAiOjE3ODE1NTAzMTF9.i6VSWdvmX_MmIGkj7mXu7hgKNrkyBKe0-NlJEkKgVTQ' \
 --form 'file=@"/{ruta de archivo}"'
 
-Nota: \
+Nota:
 - En la ruta "/samples" se encuentra un archivo de ejemplo "pedidos.csv".
 - En la ruta "/collection" se encuentra un archivo de coleccion de Postman.
