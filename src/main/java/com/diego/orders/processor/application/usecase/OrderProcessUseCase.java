@@ -111,7 +111,7 @@ public class OrderProcessUseCase implements OrderProcessBaseUseCase {
                 .toList();
     }
 
-    public PedidoErrorWrapper getOrderInputErrors(PedidoDTO pedidoDTO, List<PedidoDTO> orders) {
+    private PedidoErrorWrapper getOrderInputErrors(PedidoDTO pedidoDTO, List<PedidoDTO> orders) {
         List<String> inputErrors = validateOrderInput(pedidoDTO, orders);
         return PedidoErrorWrapper.builder()
                 .pedido(pedidoDTO)
@@ -119,7 +119,7 @@ public class OrderProcessUseCase implements OrderProcessBaseUseCase {
                 .build();
     }
 
-    public List<String> validateOrderInput(PedidoDTO pedido, List<PedidoDTO> pedidos) {
+    private List<String> validateOrderInput(PedidoDTO pedido, List<PedidoDTO> pedidos) {
         List<String> errors = new ArrayList<>();
 
         if (!StringUtils.hasText(pedido.getNumeroPedido())) {

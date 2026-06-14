@@ -3,7 +3,6 @@ package com.diego.orders.processor.domain.model;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -31,5 +30,6 @@ public class Pedido {
 
     private int posicion;
 
+    @Builder.Default
     private List<String> errores = new ArrayList<>();
 }

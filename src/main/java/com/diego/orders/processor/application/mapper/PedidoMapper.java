@@ -5,6 +5,7 @@ import com.diego.orders.processor.application.util.DateUtil;
 import com.diego.orders.processor.domain.model.OrderStatus;
 import com.diego.orders.processor.domain.model.Pedido;
 
+import java.util.ArrayList;
 import java.util.UUID;
 
 public class PedidoMapper {
