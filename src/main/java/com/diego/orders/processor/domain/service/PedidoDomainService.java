@@ -31,7 +31,7 @@ public class PedidoDomainService {
         pedidoRepositoryPort.findByNumeroPedido(order.getNumeroPedido())
                 .ifPresent(__ -> errors.add("DUPLICADO"));
 
-        Optional<Cliente> cliente = clienteRepositoryPort.findById(order.getClienteId());
+        Optional<Cliente> cliente = clienteRepositoryPort.findByIdAndActivoTrue(order.getClienteId());
         if (cliente.isEmpty()) {
             errors.add("CLIENTE_NO_ENCONTRADO");
         }

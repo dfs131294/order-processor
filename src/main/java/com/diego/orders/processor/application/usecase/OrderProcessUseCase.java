@@ -75,13 +75,13 @@ public class OrderProcessUseCase implements OrderProcessBaseUseCase {
 
         pedidos.forEach(pedidoDomainService::validatePedido);
 
-        List<Pedido> validOrders = getValidOrders(pedidos);
-        List<Pedido> invalidOrders = getInvalidOrders(pedidos);
+        List<Pedido> pedidosValidos = getValidOrders(pedidos);
+        List<Pedido> pedidosInvalidos = getInvalidOrders(pedidos);
 
-        List<OrderErrorDetailDTO> domainErrorDetailDTOS = mapToOrderErrorDetail(invalidOrders);
+        List<OrderErrorDetailDTO> domainErrorDetailDTOS = mapToOrderErrorDetail(pedidosInvalidos);
         errorDetails.addAll(domainErrorDetailDTOS);
         sortByLineNumber(errorDetails);
-        return validOrders;
+        return pedidosValidos;
     }
 
     private void sortByLineNumber(List<OrderErrorDetailDTO> domainErrorDetailDTOS) {

@@ -9,4 +9,6 @@ public interface ClienteRepositoryPort {
     Cliente save(Cliente cliente);
 
     Optional<Cliente> findById(String id);
+
+    Optional<Cliente> findByIdAndActivoTrue(String id);
 }

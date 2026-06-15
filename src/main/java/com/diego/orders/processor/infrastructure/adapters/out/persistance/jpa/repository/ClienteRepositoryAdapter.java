@@ -26,4 +26,10 @@ public class ClienteRepositoryAdapter implements ClienteRepositoryPort {
         return repository.findById(id)
                 .map(ClienteMapper::toDomain);
     }
+
+    @Override
+    public Optional<Cliente> findByIdAndActivoTrue(String id) {
+        return repository.findByIdAndActivoTrue(id)
+                .map(ClienteMapper::toDomain);
+    }
 }

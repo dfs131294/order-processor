@@ -1,3 +1,4 @@
 numeroPedido,clienteId,fechaEntrega,estado,zonaEntrega,requiereRefrigeracion
-P007,CLI-123,2026/08/10,ENTREGADO,ZONA1,true
+P007,CLI-457,2026-08-10,ENTREGADO,ZONA1,true
 P002,CLI-999,2026-08-12,ENTREGADO,ZONA5,true
+P003,CLI-234,2026-08-12,ENTREGADO,ZONA7,true
