@@ -60,7 +60,7 @@ public class PedidoDomainServiceTest {
         when(pedidoRepositoryPort.findByNumeroPedido("ORD-1"))
                 .thenReturn(Optional.empty());
 
-        when(clienteRepositoryPort.findById("CLIENTE-1"))
+        when(clienteRepositoryPort.findByIdAndActivoTrue("CLIENTE-1"))
                 .thenReturn(Optional.of(cliente));
 
         when(zonaRepositoryPort.findById("ZONA-1"))
@@ -77,7 +77,7 @@ public class PedidoDomainServiceTest {
         when(pedidoRepositoryPort.findByNumeroPedido("ORD-1"))
                 .thenReturn(Optional.of(mock(Pedido.class)));
 
-        when(clienteRepositoryPort.findById(anyString()))
+        when(clienteRepositoryPort.findByIdAndActivoTrue(anyString()))
                 .thenReturn(Optional.of(mock(Cliente.class)));
 
         when(zonaRepositoryPort.findById(anyString()))
@@ -94,7 +94,7 @@ public class PedidoDomainServiceTest {
         when(pedidoRepositoryPort.findByNumeroPedido(anyString()))
                 .thenReturn(Optional.empty());
 
-        when(clienteRepositoryPort.findById(anyString()))
+        when(clienteRepositoryPort.findByIdAndActivoTrue(anyString()))
                 .thenReturn(Optional.empty());
 
         when(zonaRepositoryPort.findById(anyString()))
@@ -113,7 +113,7 @@ public class PedidoDomainServiceTest {
         when(pedidoRepositoryPort.findByNumeroPedido(anyString()))
                 .thenReturn(Optional.empty());
 
-        when(clienteRepositoryPort.findById(anyString()))
+        when(clienteRepositoryPort.findByIdAndActivoTrue(anyString()))
                 .thenReturn(Optional.of(mock(Cliente.class)));
 
         when(zonaRepositoryPort.findById(anyString()))
@@ -130,7 +130,7 @@ public class PedidoDomainServiceTest {
         when(pedidoRepositoryPort.findByNumeroPedido(anyString()))
                 .thenReturn(Optional.empty());
 
-        when(clienteRepositoryPort.findById(anyString()))
+        when(clienteRepositoryPort.findByIdAndActivoTrue(anyString()))
                 .thenReturn(Optional.of(mock(Cliente.class)));
 
         when(zonaRepositoryPort.findById(anyString()))
@@ -154,7 +154,7 @@ public class PedidoDomainServiceTest {
         when(pedidoRepositoryPort.findByNumeroPedido(anyString()))
                 .thenReturn(Optional.empty());
 
-        when(clienteRepositoryPort.findById(anyString()))
+        when(clienteRepositoryPort.findByIdAndActivoTrue(anyString()))
                 .thenReturn(Optional.of(mock(Cliente.class)));
 
         when(zonaRepositoryPort.findById(anyString()))
@@ -179,7 +179,7 @@ public class PedidoDomainServiceTest {
         when(pedidoRepositoryPort.findByNumeroPedido(anyString()))
                 .thenReturn(Optional.of(mock(Pedido.class)));
 
-        when(clienteRepositoryPort.findById(anyString()))
+        when(clienteRepositoryPort.findByIdAndActivoTrue(anyString()))
                 .thenReturn(Optional.empty());
 
         when(zonaRepositoryPort.findById(anyString()))
